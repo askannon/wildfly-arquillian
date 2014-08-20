@@ -67,6 +67,7 @@ public class ManagementClient {
 
     private static final String SUBDEPLOYMENT = "subdeployment";
     private static final String UNDERTOW = "undertow";
+    private static final String PROXIES = "proxies";
 
     private static final String JMX = "jmx";
 
@@ -396,6 +397,7 @@ public class ManagementClient {
         operation.get(OP).set(READ_RESOURCE_OPERATION);
         operation.get(RECURSIVE).set("true");
         operation.get(INCLUDE_RUNTIME).set(includeRuntime);
+        operation.get(PROXIES).set("true");
         operation.get(OP_ADDR).set(address);
 
         return executeForResult(operation);
